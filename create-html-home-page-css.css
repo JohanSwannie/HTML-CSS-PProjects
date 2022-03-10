@@ -1,0 +1,816 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: darkgray;
+}
+
+/* center the bodyContainer that will be wrapping the complete document */
+.bodyContainer {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* styling the header area with company logo, nav bars and Call To Action */
+header {
+  position: relative;
+  display: block;
+  color: #FFFFFF;
+  background-image: linear-gradient(to right, #FFCC99, #FFE5CC, #FFCC99, #FFE5CC, #FFCC99, #FFE5CC, #FFCC99, #FFE5CC);
+  text-align: center;
+  width: 100vw;
+  height: 20vh;
+  overflow: hidden;
+}
+
+/* position the company logo */
+#companyLogo {
+  position: relative;
+  float: left;
+  width: 25vw;
+  height: 20vh;
+  mix-blend-mode: multiply;
+}
+
+/* position the nav bars and Call To Action */
+nav {
+  position: absolute;
+  right: 0%;
+  top: 50%;
+  transform: translate(0, -50%);
+  padding: 0.3em;
+}
+
+/* style the nav bars and Call To Action */
+nav a {
+  display: inline-table;
+  text-decoration: none;
+  font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+  font-size: 0.8em;
+  font-weight: bold;
+  color: #000;
+  margin: 0.7em;
+  padding: 1em;
+  background: #ff9966;
+  border: 0.25em solid #4d3300;
+  border-style: double;
+  border-radius: 20%;
+  text-align: center;
+}
+
+nav a:hover {
+  text-decoration: none;
+  color: #FFF;
+  font-weight: bold;
+  background-color: #8B4513;
+}
+
+/* style the main image with text overlay */
+.image {
+  position: relative;
+  color: white;
+  overflow: hidden;
+}
+
+#widgetImage {
+  width: 100vw;
+  height: 70vh;
+  object-fit: cover;
+}
+
+.top-left, .middle-left, .bottom-right {
+  position: absolute;
+  font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+  font-size: 2em;
+}
+
+.top-left {
+  top: 4%;
+  left: 2%;
+}
+
+.middle-left {
+  top: 15%;
+  left: 2%;
+}
+
+.bottom-right {
+  top: 88%;
+  right: 7%;
+}
+
+/* style the content headers */
+.contentHeaders {
+  display: flex;
+  color: #000;
+  font-weight: bold;
+  overflow: hidden;
+}
+
+.contentHeader1, .contentHeader2, .contentHeader3 {
+  border: 0.1em solid #000;
+  background-color: #ff9966;
+  height: 18%;
+  padding: 0.4em;
+}
+
+.contentHeaders h2 {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  position: relative;
+  height: 1.1em;
+  font-size: 1.3em;
+  text-align: center;
+}
+
+/* style the content detail */
+.para1, .para2, .para3 {
+  font-size: 1em;
+  font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+  height: 45vh;
+  padding: 0.4em;
+  letter-spacing: 0.08em;
+  background-color: #D1D1D8;
+  border: 0.1em solid #FF7F50;
+}
+
+/* style the footer with copyright, contact details and social media links */
+footer {
+  font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+  position: relative;
+  display: block;
+  color: #000;
+  background-color: #D1D1D8;
+  font-size: 1.05em;
+  font-weight: bold;
+  text-align: center;
+  height: 28vh;
+  border: 0.15em solid #e9692c;
+  padding: 1.1em;
+  overflow: hidden;
+}
+
+.para1:hover,
+.para2:hover,
+.para3:hover,
+footer:hover {
+  font-weight: bold;
+  background-color: #ffcc99;
+}
+
+/* position the copyright to float left */
+.copyRight {
+  float: left;
+}
+
+/* position the contact info */
+.contactInfo {
+  margin-top: 1.5em;
+}
+
+/* position the social media links */
+.fa {
+  margin: 0.1em;
+  padding: 0.5em;
+  font-size: 1em;
+  width: 2em;
+  height: 2em;
+  border: 0.1em solid #FFF;
+  border-radius: 55%;
+  text-decoration: none;
+  line-height: 1.2em;
+}
+
+.fa:hover {
+  opacity: 0.6;
+}
+
+.fa-social {
+  position: absolute;
+  top: 5%;
+  right: 1%;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.fa-pinterest {
+  background: #cb2027;
+  color: white;
+}
+
+/* Handle media queries for different devices */
+@media screen and (min-width: 1200px) and (max-width: 1600px) {
+  .bodyContainer, header, #widgetImage {
+    width: 100vw;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 1280px) and (max-height: 800px) {
+  footer {
+    font-size: 1em;
+    height: 30vh;
+  }
+
+  .copyRight {
+    position: absolute;
+    top: 5%;
+  }
+
+  .contactInfo {
+    margin-top: 3em
+  }
+
+  .fa-social {
+    position: absolute;
+    top: 0%;
+    left: 60%;
+  }
+
+  .contentHeader1, .contentHeader2, .contentHeader3 {
+    height: 2em;
+  }
+
+  .contentHeaders h2 {
+    font-size: 1.2em;
+  }
+
+  .para1, .para2, .para3 {
+    font-size: 1em;
+    height: 45vh;
+    letter-spacing: 0.05em;
+  }
+
+  .top-left, .middle-left, .bottom-right {
+    font-size: 1.5em;
+  }
+
+  header {
+    height: 20vh;
+  }
+
+  nav {
+    position: absolute;
+    right: 0%;
+    margin-top: 0.3em;
+  }
+
+  nav a {
+    font-size: 0.85em;
+    margin: 0.5em;
+    padding: 0.5em;
+  }
+}
+
+@media screen and (max-width: 1024px) and (max-height: 1370px) {
+  footer {
+    font-size: 1.4em;
+    height: 28vh;
+  }
+
+  .copyRight {
+    position: absolute;
+    top: 2%;
+    left: 18%;
+  }
+
+  .contactInfo {
+    margin-top: 2em
+  }
+
+  .fa-social {
+    margin-top: 1.5em;
+    top: 65%;
+    left: 1%;
+  }
+
+  .contentHeader1, .contentHeader2, .contentHeader3 {
+    height: 2.5em;
+  }
+
+  .contentHeaders h2 {
+    height: 0.75em;
+    font-size: 1.45em;
+  }
+
+  .para1, .para2, .para3 {
+    font-size: 1.15em;
+    height: 45vh;
+    letter-spacing: 0.01em;
+  }
+
+  .top-left, .middle-left, .bottom-right {
+    font-size: 2em;
+  }
+
+  header {
+    height: 40vh;
+  }
+
+  #companyLogo {
+    width: 100vw;
+  }
+
+  nav {
+    left: 0%;
+    margin-top: 6em;
+  }
+
+  nav a {
+    font-size: 1.6em;
+    margin: 0.5em;
+    padding: 0.3em;
+  }
+}
+
+@media screen and (max-width: 1024px) and (max-height: 600px) {
+  footer {
+    font-size: 1.15em;
+    height: 50vh;
+  }
+
+  .copyRight {
+    position: absolute;
+    top: 5%;
+    left: 22%;
+  }
+
+  .contactInfo {
+    margin-top: 2.5em
+  }
+
+  .fa-social {
+    position: absolute;
+    bottom: 5%;
+    margin-top: 2em;
+  }
+
+  .contentHeader1, .contentHeader2, .contentHeader3 {
+    height: 2.2em;
+  }
+
+  .contentHeaders h2 {
+    font-size: 1.2em;
+  }
+
+  .para1, .para2, .para3 {
+    font-size: 1em;
+    height: 80vh;
+    letter-spacing: 0.01em;
+  }
+
+  .top-left, .middle-left, .bottom-right {
+    font-size: 1.4em;
+  }
+
+  header {
+    height: 55vh;
+  }
+
+  #companyLogo {
+    width: 100vw;
+    height: 35vh;
+    mix-blend-mode: multiply;
+  }
+
+  nav {
+    margin-top: 5em;
+  }
+
+  nav a {
+    text-decoration: none;
+    font-size: 1em;
+    margin: 0.2em;
+    padding: 0.5em;
+  }
+}
+
+@media screen and (max-width: 768px) and (max-height: 1076px) {
+  footer {
+    font-size: 0.60em;
+  }
+
+  .copyRight {
+    position: absolute;
+    top: 2%;
+    left: 0%;
+  }
+
+  .contactInfo {
+    margin-top: 2em
+  }
+
+  .fa-social {
+    position: absolute;
+    top: 65%;
+    left: 1%;
+    margin-top: 1em;
+  }
+
+  .contentHeaders h2 {
+    height: 0.95em;
+    font-size: 0.45em;
+  }
+
+  .contentHeader1, .contentHeader2, .contentHeader3 {
+    height: 20%;
+  }
+
+  .para1, .para2, .para3 {
+    font-size: 0.45em;
+    height: 60vh;
+    letter-spacing: 0.02em;
+  }
+
+  .top-left, .middle-left, .bottom-right {
+    font-size: 0.65em;
+  }
+
+  nav {
+    left: 0%;
+    margin-top: 1.8em;
+  }
+
+  nav a {
+    font-size: 0.32em;
+    margin: 0.2em;
+    padding: 0.5em;
+  }
+
+  #companyLogo {
+    width: 100vw;
+    height: 12vh;
+    mix-blend-mode: multiply;
+  }
+}
+
+@media screen and (max-width: 768px) and (max-height: 1024px) {
+  footer {
+    font-size: 1.1em;
+  }
+
+  .copyRight {
+    position: absolute;
+    top: 2%;
+    left: 18%;
+  }
+
+  .contentHeaders h2 {
+    font-size: 0.95em;
+  }
+
+  .contentHeader1, .contentHeader2, .contentHeader3 {
+    height: 10%;
+  }
+
+  .para1, .para2, .para3 {
+    font-size: 0.95em;
+    height: 65vh;
+    letter-spacing: 0.02em;
+  }
+
+  .top-left, .middle-left, .bottom-right {
+    font-size: 1.4em;
+  }
+
+  nav {
+    left: 0%;
+    margin-top: 3em;
+  }
+
+  nav a {
+    font-size: 1em;
+    margin: 1em;
+    padding: 0.5em;
+  }
+
+  header {
+    height: 30vh;
+  }
+
+  #companyLogo {
+    width: 100vw;
+    height: 12vh;
+    mix-blend-mode: multiply;
+  }
+}
+
+@media screen and (max-width: 540px) and (max-height: 720px) {
+  footer {
+    font-size: 1em;
+    height: 45vh;
+  }
+
+  .copyRight {
+    position: absolute;
+    top: 2%;
+    left: 5%;
+  }
+
+  .contentHeaders h2 {
+    font-size: 0.95em;
+  }
+
+  .para1, .para2, .para3 {
+    font-size: 0.8em;
+    height: 85vh;
+    letter-spacing: 0.1em;
+  }
+
+  .top-left, .middle-left, .bottom-right {
+    font-size: 1.2em;
+  }
+
+  nav {
+    left: 0%;
+    margin-top: 3em;
+  }
+
+  nav a {
+    font-size: 0.9em;
+    margin: 0.55em;
+    padding: 0.5em;
+  }
+
+  header {
+    height: 50vh;
+  }
+
+  #companyLogo {
+    width: 100vw;
+    height: 20vh;
+    mix-blend-mode: multiply;
+  }
+}
+
+@media screen and (max-width: 412px) and (max-height: 824px) {
+  footer {
+    font-size: 0.75em;
+  }
+
+  .copyRight {
+    position: absolute;
+    top: 2%;
+    left: 5%;
+  }
+
+  .contentHeaders h2 {
+    font-size: 0.55em;
+  }
+
+  .contentHeader1, .contentHeader2, .contentHeader3 {
+    height: 10%;
+  }
+
+  .para1, .para2, .para3 {
+    font-size: 0.65em;
+    height: 60vh;
+    letter-spacing: 0.03em;
+  }
+
+  .top-left, .middle-left, .bottom-right {
+    font-size: 0.9em;
+  }
+
+  nav {
+    left: 0%;
+    margin-top: 2.3em;
+  }
+
+  nav a {
+    font-size: 0.55em;
+    margin: 1em;
+    padding: 0.5em;
+  }
+}
+
+@media screen and (max-width: 415px) and (max-height: 825px) {
+  nav a {
+    font-size: 0.6em;
+  }
+}
+
+@media screen and (max-width: 415px) and (max-height: 740px) {
+  footer {
+    font-size: 0.75em;
+  }
+
+  .contentHeader1, .contentHeader2, .contentHeader3 {
+    height: 12%;
+  }
+
+  .contentHeaders h2 {
+    font-size: 0.85em;
+  }
+
+  .para1, .para2, .para3 {
+    font-size: 0.65em;
+    height: 70vh;
+    letter-spacing: 0.01em;
+    padding: 0.1em;
+  }
+
+  .top-left, .middle-left, .bottom-right {
+    font-size: 1em;
+  }
+
+  nav {
+    margin-top: 2em;
+  }
+
+  nav a {
+    font-size: 0.60em;
+  }
+
+  header {
+    height: 30vh;
+  }
+}
+
+@media screen and (max-width: 380px) and (max-height: 815px) {
+  nav a {
+    font-size: 0.55em;
+  }
+}
+
+@media screen and (max-width: 380px) and (max-height: 670px) {
+  footer {
+    font-size: 0.70em;
+  }
+
+  .top-left, .middle-left, .bottom-right {
+    font-size: 0.9em;
+  }
+
+  .contentHeader1, .contentHeader2, .contentHeader3 {
+    height: 12%;
+  }
+
+  .contentHeaders h2 {
+    font-size: 0.75em;
+  }
+
+  .para1, .para2, .para3 {
+    font-size: 0.65em;
+    height: 85vh;
+  }
+
+  header {
+    height: 40vh;
+  }
+
+  nav {
+    margin-top: 3em;
+  }
+
+  nav a {
+    font-size: 0.58em;
+    margin: 0.6em;
+    padding: 0.5em;
+  }
+}
+
+@media screen and (max-width: 360px) and (max-height: 640px) {
+  footer {
+    font-size: 0.65em;
+  }
+
+  .contentHeaders h2 {
+    font-size: 0.60em;
+  }
+
+  .para1, .para2, .para3 {
+    font-size: 0.6em;
+    height: 70vh;
+    letter-spacing: 0.01em;
+    padding: 0.1em;
+  }
+
+  .top-left, .middle-left, .bottom-right {
+    font-size: 0.7em;
+  }
+
+  header {
+    height: 40vh;
+  }
+
+  nav {
+    left: 0%;
+    margin-top: 3em;
+  }
+
+  nav a {
+    font-size: 0.58em;
+    margin: 0.6em;
+    padding: 0.5em;
+  }
+}
+
+@media screen and (max-width: 320px) and (max-height: 568px) {
+  footer {
+    font-size: 0.65em;
+  }
+
+  .fa {
+    margin: 0.15em;
+    padding: 0.15em;
+    width: 1.4em;
+    height: 1.4em;
+  }
+
+  .para1, .para2, .para3 {
+    padding: 0.05em;
+    height: 85vh;
+  }
+
+  header {
+    height: 40vh;
+  }
+
+  nav {
+    margin-top: 3em;
+  }
+
+  nav a {
+    font-size: 0.55em;
+    margin: 0.3em;
+    padding: 0.5em;
+  }
+}
+
+@media screen and (max-width: 285px) and (max-height: 655px) {
+  footer {
+    font-size: 0.7em;
+  }
+
+  .contactInfo {
+    margin-top: 3em
+  }
+
+  .fa-social {
+    position: absolute;
+    top: 50%;
+    left: 1%;
+  }
+
+  .fa {
+    margin: 0.15em;
+    padding: 0.15em;
+    width: 1.4em;
+    height: 1.4em;
+  }
+
+  .para1, .para2, .para3 {
+    font-size: 0.51em;
+    padding: 0.01em;
+    height: 55vh;
+  }
+
+  header {
+    height: 40vh;
+  }
+
+  nav {
+    margin-top: 3em;
+  }
+
+  nav a {
+    font-size: 0.5em;
+    margin: 0.3em;
+    padding: 0.5em;
+  }
+}
