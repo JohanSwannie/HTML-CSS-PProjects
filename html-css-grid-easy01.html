@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Grid boxes example 1</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background-image: linear-gradient(to right, navy, red, purple, pink, yellow, lightgreen, purple, red, navy);
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr;
+      grid-template-rows: 75px 45px;
+      /* grid-row-gap: 0.5em;
+      grid-column-gap: 0.75em; */
+      grid-gap: 0.75em 0.5em;
+    }
+
+    .grid-item {
+      border: 1px solid rgba(0, 0, 0, 0.8);
+      font-size: 25px;
+      color: red;
+      background: #FFF018;
+      text-align: center;
+    }
+
+    .grid-container2 {
+      display: grid;
+      grid-template-columns: 2fr 5fr 3fr;
+      grid-template-rows: 1fr 1.5fr 1fr 1.25fr;
+      grid-gap: 0.8em;
+      margin-top: 20px;
+      /* height: 50vh; */
+    }
+
+
+    .grid-item2 {
+      border: 1px solid rgba(0, 0, 0, 0.8);
+      font-size: 25px;
+      color: navy;
+      background: lightgreen;
+      text-align: center;
+    }
+
+    .grid-container3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      grid-gap: 0.8em;
+      margin-top: 20px;
+      /* height: 50vh; */
+    }
+
+    .grid-item3 {
+      border: 1px solid rgba(0, 0, 0, 0.8);
+      font-size: 25px;
+      color: #000;
+      background: olive;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="grid-container">
+    <div class="grid-item item1">one</div>
+    <div class="grid-item item2">two</div>
+    <div class="grid-item item3">three</div>
+    <div class="grid-item item4">four</div>
+    <div class="grid-item item5">five</div>
+    <div class="grid-item item6">six</div>
+  </div>
+
+  <div class="grid-container2">
+    <div class="grid-item2 item2-1">Great Opportunity to take on for this season</div>
+    <div class="grid-item2 item2-2">Small Box</div>
+    <div class="grid-item2 item2-3">Medium size Box</div>
+    <div class="grid-item2 item2-4">Company A</div>
+    <div class="grid-item2 item2-5">Company B</div>
+    <div class="grid-item2 item2-6">Hello Candidates</div>
+    <div class="grid-item2 item2-7">When the show begins the bell will ring</div>
+    <div class="grid-item2 item2-8">Under the blue bridge</div>
+    <div class="grid-item2 item2-9">The address is in Red</div>
+    <div class="grid-item2 item2-10">The company is thriving</div>
+    <div class="grid-item2 item2-11">He throw the ball over the fence and she catch it with both hands</div>
+    <div class="grid-item2 item2-12">The cattle came over the hill</div>
+  </div>
+
+  <div class="grid-container3">
+    <div class="grid-item3 item3-1">Barn 1</div>
+    <div class="grid-item3 item3-2">Barn 2</div>
+    <div class="grid-item3 item3-3">Barn 3</div>
+    <div class="grid-item3 item3-4">Barn 4</div>
+    <div class="grid-item3 item3-5">Barn 5</div>
+    <div class="grid-item3 item3-6">Barn 6</div>
+    <div class="grid-item3 item3-7">Barn 7</div>
+    <div class="grid-item3 item3-8">Barn 8</div>
+    <div class="grid-item3 item3-9">Barn 9</div>
+  </div>
+</body>
+
+</html>
