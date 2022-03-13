@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Grid boxes example 2</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background-image: linear-gradient(to right, navy, red, purple, pink, yellow, lightgreen, purple, red, navy);
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      /* grid-row-gap: 0.5em;
+      grid-column-gap: 0.75em; */
+      grid-gap: 0.75em 0.5em;
+      grid-auto-flow: dense;
+    }
+
+    .grid-item {
+      border: 1px solid #000;
+      font-size: 25px;
+      color: red;
+      background: #FFF018;
+      text-align: center;
+    }
+
+    .item2 {
+      background: #09E888;
+      grid-column-end: -1;
+    }
+
+    .item4 {
+      color: #000;
+      background: red;
+      grid-column-start: 2;
+      grid-column-end: 4;
+      /* OR */
+      /* grid-column: 2 / 4; */
+    }
+
+    .item9 {
+      background: navy;
+      color: #FFF;
+      grid-column: 2 / span 2;
+      grid-row: 2 / span 5;
+    }
+
+    .item11 {
+      grid-area: 7 / 1 / span 2 / span 2;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="grid-container">
+    <div class="grid-item item1">one</div>
+    <div class="grid-item item2">two</div>
+    <div class="grid-item item3">three</div>
+    <div class="grid-item item4">four</div>
+    <div class="grid-item item5">five</div>
+    <div class="grid-item item6">six</div>
+    <div class="grid-item item7">seven</div>
+    <div class="grid-item item8">eight</div>
+    <div class="grid-item item9">nine</div>
+    <div class="grid-item item10">ten</div>
+    <div class="grid-item item11">eleven</div>
+    <div class="grid-item item12">twelve</div>
+  </div>
+</body>
+
+</html>
