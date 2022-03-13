@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Flex Boxes Example 1</title>
+  <style>
+
+  * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  #box-container {
+  background: gray;
+  display: flex;
+  height: 550px;
+  flex-wrap: wrap;
+  /* flex-wrap: nowrap; */                         // this is the default
+  /* flex-wrap: wrap-reverse; */
+  /* flex-direction: row; */                       // this is the default
+  /* flex-direction: column; */
+  /* flex-direction: row-reverse; */
+  /* flex-direction: column-reverse; */
+  /* align-items: flex-start; */
+  /* align-items: flex-end; */
+  align-items: center;
+  /* align-items: stretch; */                      // this is the default
+  /* align-items: baseline; */
+  /* justify-content: flex-start; */
+  /* justify-content: flex-end; */
+  /* justify-content: center; */                    // this is the default
+  justify-content: space-evenly;
+  /* justify-content: space-between; */
+  /* justify-content: space-around; */
+}
+#box-1 {
+  background-color: #E91EE4;
+  flex-basis: 25%;
+  font-size: 25px;
+  /* flex-shrink: 2;                            //  The bigger the value the bigger the shrink */
+  /* order: 1; */
+}
+
+#box-2 {
+  background-color: orangered;
+  flex-basis: 25%;
+  font-size: 38px;
+  /* flex-grow: 7;                              // The bigger the value the bigger the grow */
+  /* flex: 1 0 5em; */                       // Shorthand for flex-grow, flex-shrink and flex-basis
+  /* order: 2; */
+}
+
+#box-3 {
+  background-color: darkorange;
+  flex-basis: 25%;
+  font-size: 55px;
+  /* flex-shrink: 8; */
+  /* order: 3; */
+  /* align-self: flex-end;                     // align-self is for items in a container and have all the properties of align-items */
+}
+
+#box-4 {
+  background-color: palegreen;
+  flex-basis: 25%;
+  font-size: 80px;
+  /* order: 4; */
+}
+
+#box-5 {
+  background-color: crimson;
+  flex-basis: 25%;
+  font-size: 80px;
+  /* flex-shrink: 9; */
+  /* order: 6; */
+}
+
+#box-6 {
+  background-color: peachpuff;
+  flex-basis: 25%;
+  font-size: 80px;
+  /* order: 5; */
+}
+  </style>
+</head>
+<body>
+  <div id="box-container">
+  <div id="box-1">Learn</div>
+  <div id="box-2">More</div>
+  <div id="box-3">About</div>
+  <div id="box-4">Flex</div>
+  <div id="box-5">Boxes</div>
+  <div id="box-6">Today</div>
+</div>
+
+
+</body>
+</html>
