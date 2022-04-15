@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Form</title>
+  <style>
+    form {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-image: linear-gradient(to bottom, lightcoral, aliceblue, lightgreen, lightcyan, lightcoral);
+      max-width: 50vw;
+      max-height: 100vh;
+      font-size: 18px;
+      border: 7px solid #000;
+      border-radius: 2px;
+      border-style: double;
+      margin: 10px 1px;
+      overflow: hidden;
+      padding: 1.5em 1.5em;
+    }
+
+    label {
+      cursor: default;
+      display: inline-flex;
+      text-align: right;
+      padding: 3px 6px;
+      width: 7em;
+    }
+
+    input {
+      font-size: inherit;
+      background-color: #F9F9EA;
+    }
+
+    @media (max-width: 1280px) {
+      form {
+        max-width: 1000px;
+        font-size: 16px;
+      }
+      label {
+        width: 6.5em;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      form {
+        max-width: 900px;
+        font-size: 15px;
+      }
+      label {
+        width: 6em;
+      }
+    }
+
+    @media (max-width: 800px) {
+      form {
+        max-width: 700px;
+        font-size: 14px;
+      }
+      label {
+        width: 5em;
+      }
+    }
+
+    @media (max-width: 640px) {
+      form {
+        max-width: 540px;
+        font-size: 12px;
+      }
+      label {
+        width: 4em;
+      }
+    }
+
+    @media (max-width: 420px) {
+      form {
+        max-width: 320px;
+        font-size: 10px;
+      }
+      label {
+        width: 3em;
+      }
+    }
+
+    @media (max-width: 280px) {
+      form {
+        max-width: 180px;
+        font-size: 8px;
+      }
+      label {
+        width: 2em;
+      }
+    }
+  </style>
+</head>
+
+<body style="overflow-x: hidden; overflow-y: hidden;">
+  <form action="passiton.html" enctype="multipart/form-data" id="forms">
+    <div>
+      <label for="name">Name</label>
+      <input type="text" name="name" id="name" placeholder="username" required>
+    </div>
+    <div>
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" required>
+    </div>
+    <div>
+      <label for="age">Age</label>
+      <input type="number" name="age" id="age" required min="1" max="140" step=0.5>
+    </div>
+    <div>
+      <label for="date">Birth Date</label>
+      <input type="date" name="date" id="date" min="1880-01-01" required>
+    </div>
+    <div>
+      <label for="telephone">Telephone</label>
+      <input type="tel" name="telephone" id="telephone">
+    </div>
+    <div>
+      <label for="url">URL</label>
+      <input type="url" name="url" id="url">
+    </div>
+    <div>
+      <label for="color">Color</label>
+      <input type="color" name="color" id="color">
+    </div>
+    <div>
+      <label for="password">Password</label>
+      <input type="password" name="password" id="password" required>
+    </div>
+    <input type="hidden" name="hidden" id="hidden" value="Hallelujah">
+    <div>
+      <label for="file">File</label>
+      <input type="file" name="file" id="file">
+    </div>
+    <div>
+      Make your choice of Fruit
+      <div>
+        <label for="banana">Banana</label>
+        <input type="checkbox" name="banana" id="banana">
+      </div>
+      <div>
+        <label for="apple">Apple</label>
+        <input type="checkbox" name="apple" id="apple">
+      </div>
+    </div>
+    <div><br>
+      <div>
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="male" value="Male">
+      </div>
+      <div>
+        <label for="female">Female</label>
+        <input type="radio" name="gender" id="female" value="Female">
+      </div>
+    </div><br>
+    <div>
+      <label for="eyeColor">Eye Color</label>
+      <select name="eyeColor" id="eyeColor">
+        <option value="Green">Green</option>
+        <option value="Blue">Blue</option>
+        <option value="Brown" label="Brown"></option>
+      </select>
+    </div><br>
+    <div>
+      <label for="comments">Comments</label>
+      <textarea name="comments" id="comments" rows="4" cols="30"></textarea>
+    </div><br>
+    <button type="reset">Reset</button>
+    <button type="submit">Submit</button><br>
+
+  </form>
+  <script>
+    document.getElementById("name").focus()
+  </script>
+
+</body>
+
+</html>
