@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Passed data Page</title>
+</head>
+<body>
+  <div id="forminfo"></div>
+  <a href="forms01.html">Back to forms</a>
+  <script>
+    const formOutput = document.getElementById('forminfo')
+    new URLSearchParams(window.location.search).forEach((value, name) => {
+      formOutput.append(`${name}: ${value}`)
+      formOutput.append(document.createElement('br'))
+    });
+  </script>
+
+</body>
+</html>
