@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css2?family=Average&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Girassol&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Grenze:wght@900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous"
+    referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+  <title>Forms Exercise 1</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .contact_form {
+      user-select: none;
+      display: block;
+    }
+
+    body {
+      font-family: 'Grenze', serif;
+      font-size: 1.5rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+      word-spacing: 5px;
+      color: #404040;
+    }
+
+    .container-fluid {
+      background: linear-gradient(225deg, #eb3349, #f45c43);
+      position: absolute;
+      width: 60%;
+      margin: 0 20% 1% 20%;
+      padding: 1.8rem;
+      border: .2rem solid darkgray;
+      box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(33, 46, 70, 0.3) 10px 10px, rgba(33, 46, 70, 0.2) 15px 15px, rgba(40, 46, 0, 0.1) 20px 20px, rgba(40, 46, 0, 0.05) 25px 25px;
+    }
+
+    #mainHeading {
+      font-family: 'Girassol', cursive;
+      text-align: center;
+      color: #FFF;
+      font-weight: bold;
+      margin-bottom: 4rem;
+    }
+
+    .form_instance {
+      margin-bottom: .8rem;
+    }
+
+    #img1 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 20%;
+      height: 50vh;
+      mix-blend-mode: luminosity;
+    }
+
+    #img2 {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 20%;
+      height: 50vh;
+      mix-blend-mode: luminosity;
+    }
+
+    #img3 {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      width: 20%;
+      height: 50vh;
+      mix-blend-mode: multiply;
+    }
+
+    #img4 {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 20%;
+      height: 50vh;
+      mix-blend-mode: multiply;
+    }
+
+    label {
+      width: 70%%;
+      text-align: center;
+    }
+
+    input {
+      background: linear-gradient(225deg, #ebA0FF, #f45c43);
+      border: none;
+      border-bottom: 1px solid #000;
+      color: #FFF;
+    }
+
+    select {
+      background: linear-gradient(225deg, #ebA0FF, #f45c43);
+    }
+
+    hr.solid {
+      border-top: .1px solid #bbb;
+      margin-bottom: 3rem;
+    }
+
+    .website_choices,
+    .message_area,
+    .personal_details,
+    .services {
+      text-transform: uppercase;
+      text-align: left;
+    }
+
+    .message_area {
+      text-align: center;
+    }
+
+    input[type="radio"] {
+      width: 1.5rem;
+      height: 1.5rem;
+      vertical-align: baseline;
+    }
+
+    #textareaMessage {
+      resize: none;
+      width: 70%;
+      color: #FFF;
+      font-size: 1.5rem;
+      letter-spacing: 1.2px;
+      word-spacing: 2px;
+      background: linear-gradient(240deg, #EB5757, #EC5788, #EB5757);
+      outline: 5px solid #FFF;
+      outline-style: double;
+      margin: 1.7rem 0;
+      rows="5"cols="30"wrap="hard"
+    }
+
+    .button {
+      width: 40%;
+      padding: 1rem;
+      border: 1px solid #FFF;
+      font-weight: bold;
+      color: #FFF;
+      background: crimson;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      word-spacing: 4px;
+    }
+
+    #portfolio {
+      text-decoration: none;
+      list-style: none;
+      padding: .5rem 3rem;
+      border: 1px solid #FFF;
+      font-weight: bold;
+      color: #FFF;
+      background: crimson;
+    }
+
+    li {
+      list-style: none;
+      text-decoration: none;
+    }
+
+    li a {
+      color: #FFF;
+    }
+
+    li a i {
+      padding-left: 1rem;
+      margin-top: 4rem;
+    }
+
+    @media (max-width: 1280px) {
+      body {
+        font-size: 1.4rem;
+      }
+
+      .container-fluid {
+        padding: 1.65rem;
+      }
+
+      #mainHeading {
+        font-size: 2.7rem;
+      }
+
+      input[type="radio"] {
+        width: 1.3rem;
+        height: 1.3rem;
+      }
+
+      #submit {
+        font-size: 1.3rem;
+      }
+
+      li a i {
+        padding-left: 1rem;
+        margin-top: 3.5rem;
+      }
+
+    }
+
+    @media (max-width: 900px) {
+      body {
+        font-size: 1.25rem;
+      }
+
+      .container-fluid {
+        padding: 1.5rem;
+      }
+
+      #mainHeading {
+        font-size: 2.2rem;
+      }
+
+      input[type="radio"] {
+        width: 1.1rem;
+        height: 1.1rem;
+      }
+
+      #submit {
+        font-size: 1.1rem;
+      }
+
+      li a i {
+        padding-left: .85rem;
+        margin-top: 3.25rem;
+      }
+
+    }
+
+    @media (max-width: 768px) {
+      body {
+        font-size: 1rem;
+      }
+
+      .container-fluid {
+        padding: 1.2rem;
+      }
+
+      #mainHeading {
+        font-size: 1.9rem;
+      }
+
+      input[type="radio"] {
+        width: .85rem;
+        height: .85rem;
+      }
+
+      #submit {
+        font-size: .9rem;
+      }
+
+      li a i {
+        padding-left: .75rem;
+        margin-top: 2.8rem;
+      }
+
+    }
+
+    @media (max-width: 600px) {
+      body {
+        font-size: .8rem;
+      }
+
+      .container-fluid {
+        padding: 1rem;
+      }
+
+      #mainHeading {
+        font-size: 1.7rem;
+      }
+
+      input[type="radio"] {
+        width: .75rem;
+        height: .75rem;
+      }
+
+      #submit {
+        font-size: .75rem;
+      }
+
+      li a i {
+        padding-left: .65rem;
+        margin-top: 2.5rem;
+      }
+
+    }
+
+    @media (max-width: 480px) {
+      body {
+        font-size: .65rem;
+      }
+
+      .container-fluid {
+        padding: .85rem;
+      }
+
+      #mainHeading {
+        font-size: 1.4rem;
+      }
+
+      input[type="radio"] {
+        width: .7rem;
+        height: .7rem;
+      }
+
+      #submit {
+        font-size: .7rem;
+      }
+
+      li a i {
+        padding-left: .6rem;
+        margin-top: 2.25rem;
+      }
+
+    }
+
+    @media (max-width: 320px) {
+      body {
+        font-size: .5rem;
+      }
+
+      .container-fluid {
+        padding: .75rem;
+      }
+
+      #mainHeading {
+        font-size: 1.1rem;
+      }
+
+      input[type="radio"] {
+        width: .6rem;
+        height: .6rem;
+      }
+
+      #submit {
+        font-size: .6rem;
+      }
+
+      li a i {
+        padding-left: .5rem;
+        margin-top: 2rem;
+      }
+
+    }
+
+    @media (max-width: 240px) {
+      body {
+        font-size: .6rem;
+      }
+
+      .container-fluid {
+        padding: .6rem;
+      }
+
+      #mainHeading {
+        font-size: .9rem;
+      }
+
+      input[type="radio"] {
+        width: .45rem;
+        height: .45rem;
+      }
+
+      #submit {
+        font-size: .45rem;
+      }
+
+      li a i {
+        padding-left: .4rem;
+        margin-top: 1.5rem;
+      }
+
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="contact_form">
+    <img id="img1" src="https://cdn.decoist.com/wp-content/uploads/2015/02/Reflective-ceiling-turns-the-home-office-into-a-world-of-orange.jpg" alt="winning">
+    <img id="img2" src="https://i.pinimg.com/474x/8c/29/ee/8c29ee4ab5f4d5ba5c40393296802c56--work-office-design-modern-offices.jpg" alt="winning">
+    <img id="img3" src="https://cdn.decoist.com/wp-content/uploads/2015/02/Reflective-ceiling-turns-the-home-office-into-a-world-of-orange.jpg" alt="winning">
+    <img id="img4" src="https://i.pinimg.com/474x/8c/29/ee/8c29ee4ab5f4d5ba5c40393296802c56--work-office-design-modern-offices.jpg" alt="winning">
+    <div class="container-fluid">
+      <h1 id="mainHeading">Johan Swan - Web Development Contact Form</h1>
+      <!-- <form action="https://formspree.io/johan_swn@yahoo.co.nz" method="post"> -->
+      <form action="https://formspree.io/f/mbjwpylb" method="post">
+        <div class="row personal_details">
+          <div class="form_instance col-md-6">
+            <label for="name">Enter your name: </label>
+            <input type="text" name="name" id="name" placeholder=' ' maxlength='35' required>
+          </div>
+          <div class="form_instance col-md-6">
+            <label for="email">Enter your email: </label>
+            <input type="email" name="email" id="email" placeholder=' ' maxlength="50" required>
+          </div>
+        </div>
+        <hr class="solid">
+        <div class="website_choices">
+          <div class="row select_message">
+            <div class="form_instance col-md-12">
+              <label id="needs" for="Website-Needs">Which option best describes your Website
+                needs?
+              </label>
+              <select name="Website-Needs">
+                <option value="personal">Personal</option>
+                <option value="resume">Resume</option>
+                <option value="portfolio">Portfolio</option>
+                <option value="resume-portfolio">Resume & Portfolio</option>
+                <option value="business">Business</option>
+                <option value="blogs">Blogs</option>
+                <option value="budget">Budget Tools</option>
+                <option value="social">Social Media</option>
+                <option value="ecommerce">E-Commerce</option>
+                <option value="educational">Educational</option>
+                <option value="entertainment">Entertainment</option>
+                <option value="forums">Forums</option>
+                <option value="web-portals">Web Portals</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <hr class="solid">
+        <div class="services">
+          <div class="services_row1 row">
+            <div class="form_instance col-md-12">
+              <label>Would you recommend my services to your friends?</label>
+            </div>
+          </div>
+          <div class="services_row2 row">
+            <div class="form_instance col-md-6">
+              <input type="radio" id="recm1" name="recommend" value="definitely">
+              <label class="radio_label" for="definitely">Definitely</label>
+              <input type="radio" id="recm2" name="recommend" value="maybe">
+              <label class="radio_label" for="maybe">Maybe</label>
+              <input type="radio" id="recm3" name="recommend" value="notsure">
+              <label class="radio_label" for="notsure">Not Sure</label>
+            </div>
+          </div>
+        </div>
+        <hr class="solid">
+        <div class="row message_area">
+          <div class="form_instance col-md-12">
+            <label>Any Comments or suggestions?</label>
+            <textarea id="textareaMessage" name="textarea_message" rows="6" cols="30"></textarea><br>
+            <button class="button" type="reset" value="reset" class="btn btn-danger">Reset Form</button>
+            <button id="subby" class="button" type="submit" value="Submit" class="btn btn-danger">Submit Form</button><br><br>
+          </div>
+          <a id="portfolio" href="index.html">Back to Portfolio</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const focusMan = document.querySelector('input[type="text"]').focus()
+    const textFiddle = document.querySelectorAll('input');
+    const optionFiddle = document.querySelectorAll('select');
+
+    textFiddle.forEach(item => {
+      item.addEventListener('blur', () => {
+        item.style.background = 'linear-gradient(225deg, #eb3349, #f45c43)';
+      });
+    });
+
+    textFiddle.forEach(item => {
+      item.addEventListener('focus', () => {
+        item.style.background = 'linear-gradient(225deg, #ebA0FF, #f45c43)';
+      });
+    });
+
+    optionFiddle.forEach(item => {
+      item.addEventListener('blur', () => {
+        item.style.background = 'linear-gradient(225deg, #eb3349, #f45c43)';
+      });
+    });
+
+    optionFiddle.forEach(item => {
+      item.addEventListener('focus', () => {
+        submitForm.style.display = "block";
+        item.style.background = 'linear-gradient(225deg, #ebA0FF, #f45c43)';
+        item.style.color = '#000';
+      });
+    });
+
+  </script>
+
+</body>
+
+</html>
