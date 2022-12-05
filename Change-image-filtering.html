@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS Property - filter</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: steelblue;
+    }
+
+    img {
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .buttons {
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    button {
+      float left;
+      width: 12rem;
+      height: 4rem;
+      background: #000;
+      color: #FFF;
+      font-weight: bold;
+      margin: .2rem;
+      border: 1.2px solid white;
+    }
+
+    #bt1:hover~img {
+      filter: grayscale(100%);
+    }
+
+    #bt2:hover~img {
+      filter: blur(5px);
+    }
+
+    #bt3:hover~img {
+      filter: brightness(0.4);
+    }
+
+    #bt4:hover~img {
+      filter: contrast(200%);
+    }
+
+    #bt5:hover~img {
+      filter: hue-rotate(90deg);
+    }
+
+    #bt6:hover~img {
+      filter: invert(75%);
+    }
+
+    #bt7:hover~img {
+      filter: opacity(25%);
+    }
+
+    #bt8:hover~img {
+      filter: saturate(30%);
+    }
+
+    #bt9:hover~img {
+      filter: sepia(60%);
+    }
+
+    #bt10:hover~img {
+      filter: drop-shadow(6px 6px 2px blue);
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1 style="text-align: center">Click A Button To Change The Image Filter Property</h1><br>
+
+  <div class="buttons">
+    <button id='bt1'>grayscale image</button>
+    <button id='bt2'>blurred image</button>
+    <button id='bt3'>brightness image</button>
+    <button id='bt4'>contrast</button>
+    <button id='bt5'>hue rotate image</button><br>
+    <button id='bt6'>inverted image</button>
+    <button id='bt7'>opacity image</button>
+    <button id='bt8'>saturated image</button>
+    <button id='bt9'>sepia image</button>
+    <button id='bt10'>drop shadow image</button>
+    <img src="https://media.istockphoto.com/vectors/beautiful-nature-vector-id110873133?k=20&m=110873133&s=170667a&w=0&h=8zyH0WmGfeIjnJWxMTJc651zIoP30ajW9OJBKVdn5tg=" alt="nature" width="700" height="450">
+  </div>
+
+
+</body>
+
+</html>
